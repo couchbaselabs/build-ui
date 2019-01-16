@@ -1,0 +1,12 @@
+<h2 *ngIf="!nested">releases for {{product}}</h2>
+
+<ul class="releases">
+    <li *ngFor="let release of releases">
+        <span *ngIf="!release.expanded" (click)="release.expanded = true">+</span>
+        <span *ngIf="release.expanded" (click)="release.expanded = false">-</span>&nbsp;
+           <a>
+            <span class="badge">{{release.name ? release.name : release}}</span>
+                <app-product-release-version *ngIf="release.expanded" [nested]="true" [release_obj]=release></app-product-release-version>
+            </a>
+    </li>
+</ul>

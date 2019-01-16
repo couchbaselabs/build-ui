@@ -1,0 +1,37 @@
+<div *ngIf="product !=  '0'">
+<h4>Builds for {{product}} {{release}} {{version}}</h4>
+
+<div class="two-columns">
+
+  <div class="left-column">
+    (click a build number for details)
+
+    <ul class="builds">
+      <li *ngFor="let build of builds"><span
+        [ngStyle]="{'color': getColor(build)}"
+        (click)="selectBuild(build)"> {{build.name ?
+          build.name : build}} </span><span *ngIf="build.timestamp_date">{{build.timestamp_date | date: 'yyyy-MM-dd hh:mm'}}</span></li>
+    </ul>
+  </div>
+
+  <div class="right-column" *ngIf="getSelectedBuilds()">
+    Selected Builds: 
+    <ul>
+        <li *ngFor="let num of getSelectedBuilds()">
+            {{num}} 
+    <ul>
+      <li>Built on: {{selectedBuilds[num].timestamp_date}}</li>
+      <li><a [attr.href]="selectedBuilds[num].download_url">Download:
+          {{selectedBuilds[num].download_url}}</a></li>
+      <li>New Commits:
+        <ul *ngFor="let commit of selectedBuilds[num].new_commits">
+          <li>{{commit.key}} : {{commit.href}}]</li>
+        </ul>
+      </li>
+    </ul>
+        </li>
+    </ul>
+  </div>
+
+</div>
+</div>

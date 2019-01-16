@@ -1,0 +1,9 @@
+<h2 *ngIf="!nested">Versions for {{product}} {{release}}</h2>
+
+<ul class="versions">
+    <li *ngFor="let version of versions">
+           <a [routerLink]="['/products', {outlets: {'listOutlet': ['list', getPath(version)], 'detailOutlet': ['prod', encode(product), 'release', encode(release.name ? release.name : release), 'version', encode(version.name? version.name: version)]}}]">
+            <span class="badge">{{version}}</span>
+            </a>
+    </li>
+</ul>

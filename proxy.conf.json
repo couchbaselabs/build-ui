@@ -1,0 +1,6 @@
+{
+  "/v1": {
+    "target": "http://dbapi.build.couchbase.com:8000",
+    "secure": false
+  }
+}

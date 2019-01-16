@@ -1,0 +1,12 @@
+<h3>Current Build Products:</h3>
+<ul class="products">
+    <li *ngIf="products.length == 0">loading products...</li>
+    <li *ngFor="let product of products">
+        <span *ngIf="!product.expanded" (click)="product.expanded = true">+</span>
+        <span *ngIf="product.expanded" (click)="product.expanded = false">-</span>&nbsp;
+        <a>
+            <span class="badge">{{product.name}}</span>
+        </a>
+        <app-product-release *ngIf="product.expanded" [nested]="true" [product]="product.name" [releases]="product.releases"></app-product-release> 
+    </li>
+</ul>

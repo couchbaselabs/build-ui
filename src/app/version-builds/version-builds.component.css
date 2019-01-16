@@ -1,0 +1,27 @@
+.two-columns {
+  display: flex;
+}
+
+.left-column {
+  flex: 0 0 25%;
+  margin-right: 50px;
+ /* padding: 20px;*/
+  /*border-width: 1px;
+  border-style: solid;
+  overflow: scroll;*/
+}
+
+.right-column {
+  flex: 1;
+}
+
+.builds {
+  padding-left: 0px;
+  list-style-position: inside;
+  -webkit-margin-before: 0em;
+}
+
+li {
+  padding-left: 0px;
+  -webkit-margin-before: 0em;
+}
