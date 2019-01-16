@@ -4,10 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 To get started, you will need the latest version of angular (6 or 7 or... they update every 6 months).
 
-`npm install -g @angular/cli@latest`
-`npm install --save-dev @angular-devkit/build-angular`
-`npm install webpack-dev-server`
-`ng build`
+`npm install -g @angular/cli@latest`  
+`npm install --save-dev @angular-devkit/build-angular`  
+`npm install webpack-dev-server`  
+`ng build`  
 
 ## Development server
 
