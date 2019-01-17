@@ -4,6 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 To get started, you will need the latest version of angular (6 or 7 or... they update every 6 months).
 
+`git clone https://github.com/couchbaselabs/build-ui.git`  
 `npm install -g @angular/cli@latest`  
 `npm install --save-dev @angular-devkit/build-angular`  
 `npm install webpack-dev-server`  
@@ -12,6 +13,17 @@ To get started, you will need the latest version of angular (6 or 7 or... they u
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Deploying code to a web server
+
+To build the code in a form suitable for placing in your favorite webserver, do:
+
+`ng build -prod`  
+
+That works if the code is going at the top level. If it's going in a subdirectory, such as /build, you need to add the following:
+
+`ng build -prod --base-href /build`  
+
 
 ## Code scaffolding
 
